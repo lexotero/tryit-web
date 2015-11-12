@@ -30,14 +30,14 @@
 				<li><a href>Actividades</a></li>
 				<li><a href>Calendario</a></li>
 				<li ui-sref-active="active"><a href ui-sref="tickets">Entradas</a></li>
-				<li><a href>Contacto</a></li>
+				<li ui-sref-active="active"><a href ui-sref="contact">Contacto</a></li>
 			</ul>
 			<ul class="side-nav" id="mobile-demo">
 				<li ui-sref-active="active"><a href ui-sref="info">Información</a></li>
 				<li><a href>Actividades</a></li>
 				<li><a href>Calendario</a></li>
 				<li ui-sref-active="active"><a href ui-sref="tickets">Entradas</a></li>
-				<li><a href>Contacto</a></li>
+				<li ui-sref-active="active"><a href ui-sref="contact">Contacto</a></li>
 			</ul>
 		</div>
 	</div>
@@ -67,6 +67,7 @@
 					<li><a class="grey-text text-lighten-3" href="#!">Contacto</a></li>
 					<li><a class="grey-text text-lighten-3" href="#!">Patrocinio</a></li>
 					<li><a class="grey-text text-lighten-3" href="#!">Reconocimiento de créditos</a></li>
+					<li><a class="twitter-follow-button" href="https://twitter.com/tryit_upm">Seguir a Try IT!</a></li>
 				</ul>
 			</div>
 		</div>
@@ -100,5 +101,22 @@
 		$(".button-collapse").sideNav();
 	});
 </script>
+
+<script>window.twttr = (function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0],
+			t = window.twttr || {};
+	if (d.getElementById(id)) return t;
+	js = d.createElement(s);
+	js.id = id;
+	js.src = "https://platform.twitter.com/widgets.js";
+	fjs.parentNode.insertBefore(js, fjs);
+
+	t._e = [];
+	t.ready = function(f) {
+		t._e.push(f);
+	};
+
+	return t;
+}(document, "script", "twitter-wjs"));</script>
 </body>
 </html>

@@ -15,5 +15,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		.state('tickets', {
 			url: "/tickets",
 			templateUrl: "partials/tickets.html"
+		})
+		.state('contact', {
+			url: "/contact",
+			templateUrl: "partials/contact.html"
 		});
 });
