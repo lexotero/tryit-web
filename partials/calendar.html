@@ -1,0 +1,26 @@
+<div class="container">
+	<div id='calendar'></div>
+</div>
+
+<script>
+	$(document).ready(function() {
+		$('#calendar').fullCalendar({
+			firstDay: 1,
+			defaultDate: moment('2016-03-14'),
+			defaultView: 'basicWeek',
+			start: moment('2016-03-14'),
+			end: moment('2016-03-17'),
+			businessHours: {
+				start: '09:00',
+				end: '19:00'
+			},
+			editable: false,
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2016-03-15 22:30'
+				}
+			]
+		});
+	});
+</script>

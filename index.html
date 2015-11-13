@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/css/materialize.min.css">
 	<!-- material icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- fullcalendar.io -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.css">
+
 
 	<!-- try it css -->
 	<link href="stylesheets/tryit.css" rel="stylesheet">
@@ -28,14 +31,14 @@
 			<ul class="right hide-on-med-and-down">
 				<li ui-sref-active="active"><a href ui-sref="info">Información</a></li>
 				<li><a href>Actividades</a></li>
-				<li><a href>Calendario</a></li>
+				<li ui-sref-active="active"><a href ui-sref="calendar">Calendario</a></li>
 				<li ui-sref-active="active"><a href ui-sref="tickets">Entradas</a></li>
 				<li ui-sref-active="active"><a href ui-sref="contact">Contacto</a></li>
 			</ul>
 			<ul class="side-nav" id="mobile-demo">
 				<li ui-sref-active="active"><a href ui-sref="info">Información</a></li>
 				<li><a href>Actividades</a></li>
-				<li><a href>Calendario</a></li>
+				<li ui-sref-active="active"><a href ui-sref="calendar">Calendario</a></li>
 				<li ui-sref-active="active"><a href ui-sref="tickets">Entradas</a></li>
 				<li ui-sref-active="active"><a href ui-sref="contact">Contacto</a></li>
 			</ul>
@@ -90,6 +93,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
 <!-- angular UI router -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<!-- momentjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+<!-- fullcalendar.io -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.js"></script>
+
+
 
 <!-- angular application -->
 <script src="angular/app.js"></script>
@@ -101,8 +110,11 @@
 		$(".button-collapse").sideNav();
 	});
 </script>
-
-<script>window.twttr = (function(d, s, id) {
+<!-- ============================ -->
+<!-- twitter button init
+<!-- ============================ -->
+<script>
+	window.twttr = (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0],
 			t = window.twttr || {};
 	if (d.getElementById(id)) return t;
@@ -117,6 +129,7 @@
 	};
 
 	return t;
-}(document, "script", "twitter-wjs"));</script>
+}(document, "script", "twitter-wjs"));
+</script>
 </body>
 </html>

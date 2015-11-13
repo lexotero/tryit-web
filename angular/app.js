@@ -8,16 +8,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	//
 	// Now set up the states
 	$stateProvider
-		.state('info', {
-			url: "/info",
-			templateUrl: "partials/info.html"
-		})
-		.state('tickets', {
-			url: "/tickets",
-			templateUrl: "partials/tickets.html"
-		})
-		.state('contact', {
-			url: "/contact",
-			templateUrl: "partials/contact.html"
-		});
+			.state('info', {
+				url: "/info",
+				templateUrl: "partials/info.html"
+			})
+			.state('tickets', {
+				url: "/tickets",
+				templateUrl: "partials/tickets.html"
+			})
+			.state('calendar', {
+				url: "/calendar",
+				templateUrl: "partials/calendar.html"
+			})
+			.state('contact', {
+				url: "/contact",
+				templateUrl: "partials/contact.html"
+			});
 });
